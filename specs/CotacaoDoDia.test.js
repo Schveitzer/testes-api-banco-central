@@ -33,8 +33,7 @@ describe('Testes para o endpoint de cotações do dia, Endpoint: /CotacaoDolarDi
     });
 
     it('Verifica se o valor da cotação é separado por vírgula e se apresenta até quatro casas decimais ', async () => {
-        // `'${dataAtual}'`
-        const params = { '@dataCotacao': `'10-15-2020'`, $format: 'json' };
+        const params = { '@dataCotacao': `'${dataAtual}'`, $format: 'json' };
         const request = await client
             .get(endpoint)
             .query(params)
