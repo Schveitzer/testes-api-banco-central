@@ -14,7 +14,7 @@ beforeAll(async () => {
     client = await clienteHelper.getClient();
     endpoint = 'CotacaoDolarDia(dataCotacao=@dataCotacao)';
     dataAtual = moment(new Date()).tz('America/Sao_Paulo').format('MM-DD-YYYY'); // Data Atual Ex: 10-25-2020
-    regexPadraoMonetario = /^(\d)+(\.\d{1,4})$/; // Padrão de número monetário Ex: 4,2345
+    regexPadraoMonetario = /^(\d)+(\.\d{1,4})$/; // Padrão de número monetário Ex: 4.2345
 });
 
 describe('Testes para o endpoint de cotações do dia, Endpoint: /CotacaoDolarDia(dataCotacao=@dataCotacao) ', () => {
@@ -49,7 +49,7 @@ describe('Testes para o endpoint de cotações do dia, Endpoint: /CotacaoDolarDi
             expect(cotacaoVenda).toMatch(regexPadraoMonetario);
         } catch (e) {
             throw new Error(
-                `O valor de cotação não correspondeu ao padrão esperado ex: 4,2345, Valor recebido: ${cotacaoCompra}`,
+                `O valor de cotação não correspondeu ao padrão esperado ex: 4.2345, Valor recebido: ${cotacaoCompra}`,
             );
         }
     });
