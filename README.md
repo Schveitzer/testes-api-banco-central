@@ -25,7 +25,7 @@ Esse projeto inclui:
     - Formatador e lint de código (ESlint, Prettier)
     - Relatório em html
 
-Estrutura do porjeto:
+Estrutura do Projeto:
 ```
 .
 ├── babel.config.js
