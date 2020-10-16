@@ -1,0 +1,11 @@
+### Logs ###
+relatorios/
+
+### Node ###
+node_modules/
+yarn-error.log
+
+### IDE ###
+.DS_Store
+.vscode
+.idea

@@ -1,0 +1,30 @@
+{
+  "schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "@odata.context": {
+      "type": "string"
+    },
+    "value": {
+      "type": "array",
+      "items": [
+        {
+          "type": "object",
+          "properties": {
+            "cotacaoCompra": {
+              "type": "number"
+            },
+            "cotacaoVenda": {
+              "type": "number"
+            },
+            "dataHoraCotacao": {
+              "type": "string"
+            }
+          },
+          "required": ["cotacaoCompra", "cotacaoVenda", "dataHoraCotacao"]
+        }
+      ]
+    }
+  },
+  "required": ["@odata.context", "value"]
+}

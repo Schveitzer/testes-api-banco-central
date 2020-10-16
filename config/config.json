@@ -1,0 +1,4 @@
+{
+  "APP_BASE_URL": "https://olinda.bcb.gov.br/olinda/servico/PTAX/versao/v1/odata/",
+  "JSON_BASE_FILES_PATH": "./base-files/json/"
+}
