@@ -66,7 +66,7 @@ describe('Testes para o endpoint de cotações do dia, Endpoint: /CotacaoDolarDi
         expect(dataCotacao).toContain(data);
     });
 
-    it('Valida se os dados retornados estão corretos quando comparandos com o arquivo: cotacao_do_dia_10_05_2020.json ', async () => {
+    it('Valida se os dados retornados estão corretos quando comparados com o arquivo: cotacao_do_dia_10_05_2020.json ', async () => {
         const params = { '@dataCotacao': `'10-05-2020'`, $format: 'json' };
         const request = await client
             .get(endpoint)
