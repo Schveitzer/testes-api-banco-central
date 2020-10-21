@@ -48,7 +48,7 @@ describe('Testes para o endpoint de cotações do dia, Endpoint: /CotacaoDolarDi
             expect(cotacaoVenda).toMatch(regexPadraoMonetario);
         } catch (e) {
             throw new Error(
-                `O valor de cotação não correspondeu ao padrão esperado ex: 4.2345, Valor recebido: ${cotacaoCompra}`,
+                `O valor de cotação não correspondeu ao padrão esperado ex: 4.2345, Valores recebidos: Compra: ${cotacaoCompra} | Venda: ${cotacaoVenda}`,
             );
         }
     });
