@@ -20,7 +20,7 @@
     "supertest": "^4.0.2"
   },
   "scripts": {
-    "init:tests": "npx jest",
+    "init:tests": "jest",
     "code:format": "yarn code:lint --fix --quiet && yarn code:prettier --write",
     "code:lint": "eslint .",
     "code:prettier": "prettier --check \"**/*.js*\"",
