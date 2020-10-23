@@ -101,6 +101,17 @@ describe('Testes para o endpoint de cotações do dia, Endpoint: /CotacaoDolarDi
 
         expect(response.length).toEqual(0);
     });
+    
+    it('GET - Verifica o retorno quando informado uma data que não possuí cotação no dia ', async () => {
+        const params = { '@dataCotacao': `'10-17-2020'`, $format: 'json' };
+        const request = await client
+            .get(endpoint)
+            .query(params)
+            .expect(StatusCodes.OK);
+        const response = request.body.value;
+
+        expect(response.length).toEqual(0);
+    });
 
     it('GET - Verifica o retorno com o formato text/plain ', async () => {
         const params = {
